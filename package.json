@@ -1,7 +1,7 @@
 {
 	"name": "vmdetect",
 	"author": "kautism <darkautism@gmail.com> (https://github.com/darkautism)",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "build/Release/vmdetect",
 	"engines": {
 		"node": "8.x.x"
