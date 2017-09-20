@@ -1,0 +1,16 @@
+{
+	"name": "vmdetect",
+	"author": "kautism <darkautism@gmail.com> (https://github.com/darkautism)",
+	"version": "0.0.1",
+	"main": "build/Release/vmdetect",
+	"engines": {
+		"node": "8.x.x"
+	},
+	"scripts": {
+		"test": "node test/testmodule.js"
+	},
+	"repository": "",
+	"keywords": [
+		"addon"
+	]
+}
