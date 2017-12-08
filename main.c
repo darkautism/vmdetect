@@ -1,5 +1,6 @@
 #include <node_api.h>
 #include <string.h>
+#include <assert.h>
 #include <stdio.h>
 
 static void vmdetect_cpuid(int i, int *regs) {
@@ -54,7 +55,7 @@ napi_value hyperVenderId(napi_env env, napi_callback_info info)
     return result;
 }
 
-void Init(napi_env env, napi_value exports, napi_value module, void* priv)
+napi_value Init(napi_env env, napi_value exports)
 {
     napi_status status;
     napi_property_descriptor desc[] =
@@ -63,7 +64,8 @@ void Init(napi_env env, napi_value exports, napi_value module, void* priv)
         	{ "isHyper", 0, isHyper, 0, 0, 0, napi_default, 0 }
         };
     status = napi_define_properties(env, exports, 2, desc);
-    if (status != napi_ok) return;
+    assert(status == napi_ok);
+    return exports;
 }
 
-NAPI_MODULE(addon, Init)
+NAPI_MODULE(vmdetect, Init);
