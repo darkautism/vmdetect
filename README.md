@@ -5,7 +5,7 @@ vmdetect is a node module for detect virtusl machine envirement.
 ## Start
 
 ```javascript
-const vmdetect = require("../build/Release/vmdetect");
+const vmdetect = require("vmdetect");
 console.log(vmdetect.hyperVenderId());
 console.log(vmdetect.isHyper());
 ```
